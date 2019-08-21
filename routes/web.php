@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'ShoppingCartController@products')->name('products');
+Route::get('/','ShoppingCartController@products')->name('products');
+Route::get('/cart','ShoppingCartController@cart')->name('cart');
+Route::get('/add-to-cart/{id}', 'ShoppingCartController@addToCart')->name('add-to-cart');
+Route::get('/checkout','ShoppingCartController@checkout')->name('checkout');
 
-Route::get('/cart', 'ShoppingCartController@cart')->name('cart');
 
-Route::get('/checkout', 'ShoppingCartController@checkout')->name('checkout');
