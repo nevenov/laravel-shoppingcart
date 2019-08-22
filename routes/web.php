@@ -17,4 +17,4 @@ Route::get('/add-to-cart/{id}', 'ShoppingCartController@addToCart')->name('add-t
 Route::get('/remove-from-cart/{id}', 'ShoppingCartController@removeFromCart')->name('remove-from-cart');
 Route::get('/checkout','ShoppingCartController@checkout')->name('checkout');
 
-
+Route::post('/update-quantities', 'ShoppingCartController@updateQuantities')->name('update-quantities');

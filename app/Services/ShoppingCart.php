@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\Product;
+use Illuminate\Http\Request;
 
 class ShoppingCart {
 
@@ -43,6 +44,21 @@ class ShoppingCart {
 
         session(['cart_data.total_price' => (float) sprintf('%.2f',$total_price)]);
         session(['cart_data.total_amount' => (int) $total_amount]);
+    }
+
+    public function updateQuantities(Request $request)
+    {
+        foreach($request->input('amounts') as $product => $amount)
+        {
+            $amount = (int) $amount;
+            if($amount < 0 ) $amount = 0;
+
+            session(['cart.'.$product.'.amount' => $amount]);
+
+            session(['cart.'.$product.'.total_price' => $amount * session('cart.'.$product.'.price')]);
+        }
+
+        $this->updateCart();
     }
 
     public function removeFromCart($id)

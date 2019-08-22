@@ -35,6 +35,13 @@ class ShoppingCartController extends Controller
         return redirect()->route('cart');
     }
 
+    public function updateQuantities(Request $request, ShoppingCart $cart)
+    {
+        if($request->input('amounts'))
+            $cart->updateQuantities($request);
+        return redirect()->route('cart');
+    }
+
     public function checkout()
     {
         $cart_products = session('cart') ?? [];

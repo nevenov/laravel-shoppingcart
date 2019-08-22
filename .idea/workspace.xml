@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed2ee77f-6af8-40fb-a60f-dba0e19cdde8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShoppingCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShoppingCartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/ShoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ShoppingCart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="ShoppingCartController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShoppingCartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="569">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -35,19 +34,9 @@
         <entry file="file://$PROJECT_DIR$/app/Services/ShoppingCart.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="535">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/cart.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
-                <element signature="e#2002#2008#0#HTML" expanded="true" />
-                <element signature="e#2562#2568#0#HTML" expanded="true" />
+                <element signature="e#31#47#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,6 +49,19 @@
               <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/cart.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#2007#2013#0#HTML" expanded="true" />
+                <element signature="e#2567#2573#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -227,6 +229,19 @@
               <item name="laravel-shopping-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel-shopping-cart" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel-shopping-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel-shopping-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -283,12 +298,12 @@
       <workItem from="1566207970117" duration="6202000" />
       <workItem from="1566295152125" duration="811000" />
       <workItem from="1566389301679" duration="1106000" />
-      <workItem from="1566476253129" duration="2900000" />
+      <workItem from="1566476253129" duration="3590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11019000" />
+    <option name="totallyTimeSpent" value="11709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -350,6 +365,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#31#47#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -477,8 +495,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShoppingCartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="569">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
@@ -488,17 +506,20 @@
     <entry file="file://$PROJECT_DIR$/app/Services/ShoppingCart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#31#47#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
-            <element signature="e#2002#2008#0#HTML" expanded="true" />
-            <element signature="e#2562#2568#0#HTML" expanded="true" />
+            <element signature="e#2007#2013#0#HTML" expanded="true" />
+            <element signature="e#2567#2573#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

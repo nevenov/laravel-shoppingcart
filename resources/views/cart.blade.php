@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <form method="POST" action="?action=update-quantities">
+    <form method="POST" action="{{route('update-quantities')}}">
         <table class="table table-hover table-responsive">
             <thead>
             <tr>
@@ -70,5 +70,6 @@
             </tr>
             </tbody>
         </table>
+        @csrf
     </form>
 @endsection
