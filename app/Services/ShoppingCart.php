@@ -45,4 +45,16 @@ class ShoppingCart {
         session(['cart_data.total_amount' => (int) $total_amount]);
     }
 
+    public function removeFromCart($id)
+    {
+        session()->forget('cart.'.$id);
+        $this->updateCart();
+    }
+
+    public function deleteCart()
+    {
+        session()->forget('cart');
+        session()->forget('cart_data');
+    }
+
 }

@@ -29,6 +29,12 @@ class ShoppingCartController extends Controller
         return redirect()->route('cart');
     }
 
+    public function removeFromCart($id, ShoppingCart $cart)
+    {
+        $cart->removeFromCart($id);
+        return redirect()->route('cart');
+    }
+
     public function checkout()
     {
         $cart_products = session('cart') ?? [];

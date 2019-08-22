@@ -31,7 +31,7 @@
                     <td class="col-sm-1 col-md-1 text-center"><strong>${{$product['price']}}</strong></td>
                     <td class="col-sm-1 col-md-1 text-center"><strong>${{$product['total_price']}}</strong></td>
                     <td class="col-sm-1 col-md-1">
-                        <a href="?action=remove-from-cart&id=1"
+                        <a href="{{route('remove-from-cart',$id)}}"
                            onclick="return confirm('Delete the product from the cart?');" role="button"
                            class="btn btn-danger">
                             Remove
