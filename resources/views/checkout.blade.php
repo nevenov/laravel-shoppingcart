@@ -3,8 +3,9 @@
 @section('content')
     <div class="col-md-4 mt-4">
         <div class="row">
-            <form method="POST" action="?action=create-payment">
+            <form method="POST" action="{{route('create-payment')}}">
                 <input type="image" name="submit_red" alt="Check out with PayPal" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png">
+                @csrf
             </form>
         </div>
     </div>
