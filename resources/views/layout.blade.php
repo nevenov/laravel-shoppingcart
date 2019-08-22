@@ -14,7 +14,12 @@
 
 <body>
 <div class="mt-5 container">
-    <span class="float-right">&nbsp;You are not logged in <a href="?action=login">login</a> </span>
+    @guest
+        <span class="float-right">&nbsp;You are not logged in <a href="{{route('login')}}">login</a> </span>
+    @else
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+        <span class="float-right">&nbsp;You are logged in as {{Auth::user()->name}} <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">logout</a> </span>
+    @endguest
     <span class="float-right"><a href="{{route('cart')}}">Your cart ({{session('cart_data.total_amount') ?? 0}})</a> </span>
     <h1><span class="text-info">SUPER</span> <span class="text-danger">SHOP</span></h1>
     <p class="text-success">The best online store</p>
