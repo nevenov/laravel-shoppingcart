@@ -15,14 +15,12 @@
 <body>
 <div class="mt-5 container">
     <span class="float-right">&nbsp;You are not logged in <a href="?action=login">login</a> </span>
-    <span class="float-right"><a href="{{ route('cart') }}">Your cart (0)</a> </span>
+    <span class="float-right"><a href="{{route('cart')}}">Your cart ({{session('cart_data.total_amount') ?? 0}})</a> </span>
     <h1><span class="text-info">SUPER</span> <span class="text-danger">SHOP</span></h1>
     <p class="text-success">The best online store</p>
     <hr>
     <div class="row">
-
         @yield('content')
-
     </div>
 </div>
 </body>

@@ -51,7 +51,7 @@
                     <h3>Total price:</h3>
                 </td>
                 <td class="text-right">
-                    <h3><strong>$2901</strong></h3>
+                    <h3><strong>${{$total_price}}</strong></h3>
                 </td>
             </tr>
             <tr>

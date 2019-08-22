@@ -19,7 +19,8 @@ class ShoppingCartController extends Controller
     public function cart()
     {
         $cart_products = session('cart') ?? [];
-        return view('cart', compact('cart_products'));
+        $total_price = session('cart_data.total_price') ?? 0;
+        return view('cart', compact('cart_products', 'total_price'));
     }
 
     public function addToCart($id, ShoppingCart $cart)
@@ -31,7 +32,9 @@ class ShoppingCartController extends Controller
     public function checkout()
     {
         $cart_products = session('cart') ?? [];
-        return view('checkout',compact('cart_products'));
+        $total_price = session('cart_data.total_price') ?? 0;
+        $total_amount = session('cart_data.total_amount') ?? 0;
+        return view('checkout',compact('cart_products','total_price','total_amount'));
     }
 
 }
