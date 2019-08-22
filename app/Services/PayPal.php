@@ -1,7 +1,8 @@
 <?php
 namespace App\Services;
 
-use PayPal\Api\{Payer,Item,ItemList,Details,Amount,Transaction,RedirectUrls,Payment};
+use PayPal\Api\{Payer,Item,ItemList,Details,Amount,Transaction,RedirectUrls,Payment,PaymentExecution};
+use App\Services\ShoppingCart;
 
 class PayPal {
 
@@ -58,6 +59,50 @@ class PayPal {
         $payment->create($apiContext);
         $approvalUrl = $payment->getApprovalLink();
         return $approvalUrl;
+    }
+
+    public function executePayment()
+    {
+        $apiContext = new \PayPal\Rest\ApiContext(
+            new \PayPal\Auth\OAuthTokenCredential(
+                env('PAYPAL_CLIENT_ID'),     // ClientID
+                env('PAYPAL_CLIENT_SECRET')      // ClientSecret
+            )
+        );
+
+        $paymentId = request('paymentId');
+        $payment = Payment::get($paymentId, $apiContext);
+
+        $execution = new PaymentExecution();
+        $execution->setPayerId(request('PayerID'));
+
+        $transaction = new Transaction();
+        $amount = new Amount();
+        $details = new Details();
+
+        $details->setShipping(0)
+            ->setTax(0)
+            ->setSubtotal(session('cart_data.total_price'));
+
+        $amount->setCurrency('USD');
+        $amount->setTotal(session('cart_data.total_price'));
+        $amount->setDetails($details);
+        $transaction->setAmount($amount);
+
+        $execution->addTransaction($transaction);
+        $result = $payment->execute($execution, $apiContext);
+        $result = $result->toJSON();
+
+        $result = json_decode($result);
+
+        if($result->state === 'approved')
+        {
+            dd($result);
+            // ... here save order in the database
+
+            $cart = new ShoppingCart();
+            $cart->deleteCart();
+        }
     }
 
 }

@@ -24,7 +24,8 @@ class PayPalController extends Controller
 
     public function executePayment()
     {
-        return 'to do';
+        $this->pp->executePayment();
+        return redirect()->route('products');
     }
 }
 
