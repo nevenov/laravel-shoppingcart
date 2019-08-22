@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\PayPal;
 
 class PayPalController extends Controller
 {
 
-    public function __construct()
+    public function __construct(PayPal $pp)
     {
+        $this->pp = $pp;
         $this->middleware('auth');
     }
 
@@ -17,7 +19,12 @@ class PayPalController extends Controller
         if( !session('cart') || empty(session('cart')) || session('cart_data.total_price') == 0 )
             return redirect()->route('products');
 
-        return 'create payment';
+        return redirect($this->pp->createPayment());
+    }
+
+    public function executePayment()
+    {
+        return 'to do';
     }
 }
 

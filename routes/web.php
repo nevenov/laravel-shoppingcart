@@ -19,5 +19,6 @@ Route::get('/checkout','ShoppingCartController@checkout')->name('checkout');
 
 Route::post('/update-quantities', 'ShoppingCartController@updateQuantities')->name('update-quantities');
 Route::post('/create-payment', 'PayPalController@createPayment')->name('create-payment');
+Route::get('/execute-payment', 'PayPalController@executePayment')->name('execute-payment');
 Auth::routes();
 
