@@ -18,12 +18,8 @@ class ShoppingCartController extends Controller
 
     public function cart()
     {
-        return view('cart');
-    }
-
-    public function checkout()
-    {
-        return view('checkout');
+        $cart_products = session('cart') ?? [];
+        return view('cart', compact('cart_products'));
     }
 
     public function addToCart($id, ShoppingCart $cart)
@@ -31,5 +27,11 @@ class ShoppingCartController extends Controller
         $cart->addToCart(Product::find($id));
         return redirect()->route('cart');
     }
+
+    public function checkout()
+    {
+        return view('checkout');
+    }
+
 }
 
