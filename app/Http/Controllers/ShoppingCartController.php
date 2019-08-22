@@ -30,7 +30,8 @@ class ShoppingCartController extends Controller
 
     public function checkout()
     {
-        return view('checkout');
+        $cart_products = session('cart') ?? [];
+        return view('checkout',compact('cart_products'));
     }
 
 }
